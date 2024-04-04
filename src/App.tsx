@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
+import { Navbar } from './layouts/NavbarAndFooter/Navbar';
+import { ExploreTopOptions } from './layouts/HomePage/ExploreTopOptions';
+import { Carousel } from './layouts/HomePage/Carousel';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-      <h2>Testing</h2>
+    <div>
+      <Navbar />
+      <ExploreTopOptions />
+      <Carousel />
     </div>
   );
 }
