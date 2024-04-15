@@ -2,7 +2,7 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark main-color py-3">
       <div className="container-fluid">
-        <span className="navbar-brand">Casorio</span>
+        <span className="navbar-brand">SSBeauty</span>
         <button
           className="navbar-toggler"
           type="button"
@@ -23,7 +23,12 @@ export const Navbar = () => {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Search Items
+                Galeria
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Agendamento
               </a>
             </li>
           </ul>
