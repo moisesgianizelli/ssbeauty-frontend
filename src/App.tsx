@@ -6,6 +6,7 @@ import { HomePage } from "./layouts/HomePage/HomePage";
 import { Booking } from "./layouts/HomePage/components/Booking";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { Gallery } from "./layouts/HomePage/components/Gallery";
+import ImagesGallery from "./layouts/HomePage/components/ImagesGallery";
 
 export const App = () => {
   return (
