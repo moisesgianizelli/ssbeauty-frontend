@@ -6,26 +6,30 @@ import { HomePage } from "./layouts/HomePage/HomePage";
 import { Booking } from "./layouts/HomePage/components/Booking";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { Gallery } from "./layouts/HomePage/components/Gallery";
-import ImagesGallery from "./layouts/HomePage/components/ImagesGallery";
 
 export const App = () => {
   return (
-    <div>
+    <div className="d-flex flex-column min-vh-100">
       <Navbar />
-      <Switch>
-        <Route path="/" exact>
-          <Redirect to="/home" />
-        </Route>
-        <Route path="/home">
-          <HomePage />
-        </Route>
-        <Route path="/booking">
-          <Booking />
-        </Route>
-        <Route path="/gallery">
-          <Gallery />
-        </Route>
-      </Switch>
+      <div className="flex-grow-1">
+        <Switch>
+          <Route path="/" exact>
+            <Redirect to="/home" />
+          </Route>
+          <Route path="/home">
+            <HomePage />
+          </Route>
+          <Route path="/booking">
+            <Booking />
+          </Route>
+          <Route path="/gallery">
+            <Gallery />
+          </Route>
+          <Route path="/booking">
+            <Booking />
+          </Route>
+        </Switch>
+      </div>
       <Footer />
     </div>
   );
