@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export const ExploreTopOptions = () => {
   return (
     <div className="p-5 mb-4 bg-dark header">
@@ -21,9 +23,12 @@ export const ExploreTopOptions = () => {
                 Profissionalizada em micropigmentacao e sobrancelhas
               </p>
 
-              <a href="#" className="btn main-color btn-lg text-white">
+              <NavLink
+                to="/gallery"
+                className="btn main-color btn-lg text-white"
+              >
                 Conheca mais nossos servicos
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

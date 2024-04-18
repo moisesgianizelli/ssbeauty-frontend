@@ -16,6 +16,11 @@ export const Footer = () => {
               Galeria
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink to="/booking" className="nav-link px-2 text-white">
+              Agendamento
+            </NavLink>
+          </li>
         </ul>
       </footer>
     </div>
