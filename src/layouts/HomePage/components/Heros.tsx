@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export const Heros = () => {
   return (
     <div>
@@ -11,9 +13,12 @@ export const Heros = () => {
             <div className="ml-2">
               <h1>Sombrancelha</h1>
               <p className="lead">Procurando servico de beleza</p>
-              <a className="btn main-color btn-lg text-white" href="#">
+              <NavLink
+                className="btn main-color btn-lg text-white"
+                to="/booking"
+              >
                 Agende aqui
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -24,6 +29,12 @@ export const Heros = () => {
               <p className="lead">
                 Sempre estamos nos atualizando e postando novas imagens
               </p>
+              <NavLink
+                className="btn main-color btn-lg text-white"
+                to="/gallery"
+              >
+                Checar galeria
+              </NavLink>
             </div>
           </div>
           <div className="col-sm-6 col-md-6">
@@ -32,7 +43,7 @@ export const Heros = () => {
         </div>
       </div>
       {/* Mobile Heros */}
-      <div className="d-lg-none">
+      <div id="body" className="d-lg-none">
         <div className="container">
           <div className="m-2">
             <div className="col-image-left"></div>
