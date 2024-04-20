@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { Calendar, momentLocalizer } from "react-big-calendar";
+import moment from "moment";
+import "react-big-calendar/lib/css/react-big-calendar.css";
 import { Modal, Button } from "react-bootstrap";
 
 interface BookingForm {
@@ -6,9 +10,12 @@ interface BookingForm {
   email: string;
   phone: string;
   service: string;
-  date: string;
+  date: Date | null;
   time: string;
+  comment: string;
 }
+
+const localizer = momentLocalizer(moment);
 
 export const Booking = () => {
   const [formData, setFormData] = useState<BookingForm>({
@@ -16,21 +23,35 @@ export const Booking = () => {
     email: "",
     phone: "",
     service: "",
-    date: "",
+    date: null,
     time: "",
+    comment: "",
   });
 
-  const [showModal, setShowModal] = useState<boolean>(false);
+  const [showDateModal, setShowDateModal] = useState<boolean>(false);
+  const [showTimeModal, setShowTimeModal] = useState<boolean>(false);
   const [selectedTime, setSelectedTime] = useState<string>("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const {
+    register,
+    formState: { errors },
+  } = useForm<BookingForm>();
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSelectSlot = (slotInfo: { start: Date; end: Date }) => {
+    setFormData({ ...formData, date: slotInfo.start });
+    setShowDateModal(false);
   };
 
   const handleTimeSelection = (time: string) => {
     setSelectedTime(time);
     setFormData({ ...formData, time });
-    setShowModal(false);
+    setShowTimeModal(false);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -38,125 +59,175 @@ export const Booking = () => {
     console.log(formData);
   };
 
+  const events = [
+    {
+      title: "Disponível",
+      start: new Date(2024, 3, 21, 10, 0), //data disponivel
+      end: new Date(2024, 3, 21, 11, 0),
+    },
+    {
+      title: "Disponível",
+      start: new Date(2024, 3, 22, 13, 0), // hora disponivel
+      end: new Date(2024, 3, 22, 14, 0),
+    },
+    {
+      title: "Disponível",
+      start: new Date(2024, 3, 23, 15, 0), // Exemplo de data e hora disponível
+      end: new Date(2024, 3, 23, 16, 0),
+    },
+  ];
+
   return (
-    <div className="mt-5 text-center">
-      <h1>Agendamento</h1>
+    <div className="container mt-5">
+      <h1 className="text-center mb-4">Agendamento</h1>
       <form
         onSubmit={handleSubmit}
-        className="mt-3 mx-auto"
-        style={{ maxWidth: "400px" }}
+        style={{ maxWidth: "400px", margin: "auto" }}
       >
-        <div className="mb-3">
-          <label htmlFor="name" className="form-label">
-            Nome:
-          </label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="form-control"
-            required
-          />
+        <div className="row mb-3">
+          <div className="col">
+            <input
+              type="text"
+              placeholder="Nome"
+              {...register("name")}
+              className="form-control form-control-lg input-lg"
+              required
+            />
+          </div>
+          <div className="col">
+            <input
+              type="email"
+              placeholder="Email"
+              {...register("email")}
+              className="form-control form-control-lg input-lg"
+              required
+            />
+          </div>
+        </div>
+        <div className="row mb-3">
+          <div className="col">
+            <input
+              type="tel"
+              placeholder="Telefone"
+              {...register("phone")}
+              className="form-control form-control-lg input-lg"
+              required
+            />
+          </div>
+          <div className="col">
+            <select
+              {...register("service")}
+              className="form-control form-control-lg input-lg"
+              required
+            >
+              <option value="">Selecione o serviço</option>
+              <option value="Sobrancelha">Sobrancelha</option>
+              <option value="Micropigmentação">Micropigmentação</option>
+            </select>
+          </div>
+        </div>
+        <div className="row mb-3">
+          <div className="col">
+            <input
+              type="text"
+              name="date"
+              placeholder="Data"
+              value={formData.date ? formData.date.toLocaleDateString() : ""}
+              readOnly
+              className="form-control form-control-lg input-lg"
+              required
+              onClick={() => setShowDateModal(true)}
+            />
+          </div>
+          <div className="col">
+            <input
+              type="text"
+              name="time"
+              value={selectedTime}
+              readOnly
+              className="form-control form-control-lg input-lg"
+              required
+              onClick={() => setShowTimeModal(true)}
+            />
+          </div>
         </div>
         <div className="mb-3">
-          <label htmlFor="email" className="form-label">
-            Email:
-          </label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="form-control"
-            required
+          <textarea
+            placeholder="Comentário"
+            {...register("comment")}
+            className="form-control form-control-lg input-lg"
           />
         </div>
-        <div className="mb-3">
-          <label htmlFor="phone" className="form-label">
-            Telefone:
-          </label>
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className="form-control"
-            required
-          />
+        <div className="d-grid">
+          <button type="submit" className="btn btn-primary btn-lg">
+            Agendar
+          </button>
         </div>
-        <div className="mb-3">
-          <label htmlFor="service" className="form-label">
-            Serviço:
-          </label>
-          <input
-            type="text"
-            name="service"
-            value={formData.service}
-            onChange={handleChange}
-            className="form-control"
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="date" className="form-label">
-            Data:
-          </label>
-          <input
-            type="date"
-            name="date"
-            value={formData.date}
-            onChange={handleChange}
-            className="form-control"
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="time" className="form-label">
-            Hora:
-          </label>
-          <input
-            type="text"
-            name="time"
-            value={selectedTime}
-            readOnly
-            className="form-control"
-            required
-          />
-        </div>
-        <Button type="submit" className="mb-3">
-          Agendar
-        </Button>
-        <Button
-          variant="secondary"
-          onClick={() => setShowModal(true)}
-          className="mb-3"
-        >
-          Verificar Disponibilidade
-        </Button>
       </form>
 
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
+      <Modal show={showDateModal} onHide={() => setShowDateModal(false)}>
         <Modal.Header closeButton>
-          <Modal.Title>Datas e Horários Disponíveis</Modal.Title>
+          <Modal.Title>Selecione a Data</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Button
-            variant="outline-primary"
-            className="d-block mx-auto mb-2"
-            onClick={() => handleTimeSelection("09:00")}
-          >
-            09:00
-          </Button>
-          <Button
-            variant="outline-primary"
-            className="d-block mx-auto mb-2"
-            onClick={() => handleTimeSelection("10:00")}
-          >
-            10:00
-          </Button>
+          <div style={{ height: 500 }}>
+            <Calendar
+              localizer={localizer}
+              events={events}
+              startAccessor="start"
+              endAccessor="end"
+              selectable="ignoreEvents"
+              onSelectSlot={handleSelectSlot}
+              eventPropGetter={(event, start, end, isSelected) => ({
+                className: "disabled-event",
+              })}
+            />
+          </div>
         </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowDateModal(false)}>
+            Fechar
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal show={showTimeModal} onHide={() => setShowTimeModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Selecione a Hora</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="d-flex justify-content-center">
+            <Button
+              variant="primary"
+              className="m-2"
+              onClick={() => handleTimeSelection("10:00")}
+            >
+              10:00
+            </Button>
+            <Button
+              variant="primary"
+              className="m-2"
+              onClick={() => handleTimeSelection("13:00")}
+            >
+              13:00
+            </Button>
+            <Button
+              variant="primary"
+              className="m-2"
+              onClick={() => handleTimeSelection("15:00")}
+            >
+              15:00
+            </Button>
+          </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowTimeModal(false)}>
+            Fechar
+          </Button>
+        </Modal.Footer>
       </Modal>
     </div>
   );
 };
+
+export default Booking;
