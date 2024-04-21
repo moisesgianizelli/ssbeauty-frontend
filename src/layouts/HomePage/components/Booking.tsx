@@ -80,17 +80,14 @@ export const Booking = () => {
   return (
     <div className="container mt-5">
       <h1 className="text-center mb-4">Agendamento</h1>
-      <form
-        onSubmit={handleSubmit}
-        style={{ maxWidth: "400px", margin: "auto" }}
-      >
+      <form onSubmit={handleSubmit}>
         <div className="row mb-3">
           <div className="col">
             <input
               type="text"
               placeholder="Nome"
               {...register("name")}
-              className="form-control form-control-lg input-lg"
+              className="form-control"
               required
             />
           </div>
@@ -99,7 +96,7 @@ export const Booking = () => {
               type="email"
               placeholder="Email"
               {...register("email")}
-              className="form-control form-control-lg input-lg"
+              className="form-control"
               required
             />
           </div>
@@ -110,16 +107,12 @@ export const Booking = () => {
               type="tel"
               placeholder="Telefone"
               {...register("phone")}
-              className="form-control form-control-lg input-lg"
+              className="form-control"
               required
             />
           </div>
           <div className="col">
-            <select
-              {...register("service")}
-              className="form-control form-control-lg input-lg"
-              required
-            >
+            <select {...register("service")} className="form-control" required>
               <option value="">Selecione o serviço</option>
               <option value="Sobrancelha">Sobrancelha</option>
               <option value="Micropigmentação">Micropigmentação</option>
@@ -134,7 +127,7 @@ export const Booking = () => {
               placeholder="Data"
               value={formData.date ? formData.date.toLocaleDateString() : ""}
               readOnly
-              className="form-control form-control-lg input-lg"
+              className="form-control"
               required
               onClick={() => setShowDateModal(true)}
             />
@@ -145,7 +138,7 @@ export const Booking = () => {
               name="time"
               value={selectedTime}
               readOnly
-              className="form-control form-control-lg input-lg"
+              className="form-control"
               required
               onClick={() => setShowTimeModal(true)}
             />
@@ -155,7 +148,7 @@ export const Booking = () => {
           <textarea
             placeholder="Comentário"
             {...register("comment")}
-            className="form-control form-control-lg input-lg"
+            className="form-control"
           />
         </div>
         <div className="d-grid">
