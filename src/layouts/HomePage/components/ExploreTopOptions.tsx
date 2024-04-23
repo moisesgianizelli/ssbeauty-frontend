@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export const ExploreTopOptions = () => {
   return (
-    <div className="p-5 mb-4 bg-dark header">
+    <div className="p-5 mb-4" style={{ backgroundColor: "#332b3f" }}>
       <div className="container-fluid py-5 text-white d-flex justify-content-center align-items-center">
         <div className="row">
           <div className="col-md-6">
@@ -19,6 +19,10 @@ export const ExploreTopOptions = () => {
               <h1 className="display-5 fw-bold">Suyene Silveira</h1>
               <p className="fs-4">
                 Profissionalizada em micropigmentacao e sobrancelhas
+              </p>
+              <p className="fs-5">
+                Com mais de 10 anos de experiencia em mais de 10 mil clientes
+                atendidos
               </p>
 
               <NavLink
