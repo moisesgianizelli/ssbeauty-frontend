@@ -8,7 +8,6 @@ export const Heros = () => {
           <div className="col-sm-6 col-md-6">
             <div className="col-image-left"></div>
           </div>
-
           <div className="col-4 col-md-4 container d-flex justify-content-center align-items-center">
             <div className="ml-2">
               <h1>Sombrancelha</h1>
