@@ -16,12 +16,21 @@
 }
 
 .col-image-left {
-  background-image: url("./Images/PublicImages/images.jpg");
+  background-image: url("./Images/PublicImages/rosto3.JPG");
+  background-size: cover;
+  background-position: center;
   height: 25em !important;
 }
-
 .col-image-right {
-  background-image: url("./Images/PublicImages/5137_B.jpg");
+  background-image: url("./Images/PublicImages/boca.JPG");
+  background-size: cover;
+  background-position: center;
+  height: 25em !important;
+}
+.col-image-left2 {
+  background-image: url("./Images/PublicImages/rosto5.JPG");
+  background-size: cover;
+  background-position: center;
   height: 25em !important;
 }
 
