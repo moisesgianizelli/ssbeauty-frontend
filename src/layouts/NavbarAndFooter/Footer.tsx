@@ -17,7 +17,7 @@ export const Footer = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/booking" className="nav-link px-2 text-white">
+            <NavLink to="/agendamento" className="nav-link px-2 text-white">
               Agendamento
             </NavLink>
           </li>
