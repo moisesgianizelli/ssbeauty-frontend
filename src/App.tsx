@@ -6,6 +6,7 @@ import { HomePage } from "./layouts/HomePage/HomePage";
 import { Booking } from "./layouts/HomePage/components/Booking";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { Gallery } from "./layouts/HomePage/components/Gallery";
+import Agendamento from "./layouts/HomePage/components/Agendamento";
 
 export const App = () => {
   return (
@@ -19,14 +20,11 @@ export const App = () => {
           <Route path="/home">
             <HomePage />
           </Route>
-          <Route path="/booking">
-            <Booking />
+          <Route path="/agendamento">
+            <Agendamento />
           </Route>
           <Route path="/gallery">
             <Gallery />
-          </Route>
-          <Route path="/booking">
-            <Booking />
           </Route>
         </Switch>
       </div>
