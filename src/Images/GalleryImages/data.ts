@@ -5,7 +5,7 @@ export const slides = [
     description: "Slide Description One\n\nthis is new line",
   },
   {
-    src: "https://images.unsplash.com/photo-1682686581551-867e0b208bd1?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "Images/PublicImages/unnamed.jpg",
     title: "Slide Title Two",
     description: "Slide Description Two",
   },
