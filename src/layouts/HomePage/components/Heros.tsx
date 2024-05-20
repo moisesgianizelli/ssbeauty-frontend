@@ -10,7 +10,7 @@ export const Heros = () => {
           </div>
           <div className="col-4 col-md-4 container d-flex justify-content-center align-items-center">
             <div className="ml-2">
-              <h1>Sombrancelha</h1>
+              <h1>Sobrancelha</h1>
               <p className="lead">Procurando servico de beleza</p>
               <NavLink
                 className="btn main-color btn-lg text-white"
@@ -64,7 +64,7 @@ export const Heros = () => {
           <div className="m-2">
             <div className="col-image-left"></div>
             <div className="mt-2">
-              <h1>Sombrancelha</h1>
+              <h1>Sobrancelha</h1>
               <p className="lead">Just a generic phrase here</p>
               <a className="btn main-color btn-lg text-white" href="#">
                 Agende agora
