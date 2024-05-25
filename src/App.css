@@ -71,3 +71,22 @@
   padding: 10px;
   font-size: 16px;
 }
+.social {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social li {
+  margin: 0 10px;
+}
+
+.social a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social .icon {
+  font-size: 1.5rem;
+}

@@ -13,7 +13,7 @@ export const Heros = () => {
               <h1>Sobrancelha</h1>
               <p className="lead">Procurando servico de beleza</p>
               <NavLink
-                className="btn main-color btn-lg text-white"
+                className="btn main-color btn-lg btn-outline-light"
                 to="/booking"
               >
                 Agende aqui
@@ -29,7 +29,7 @@ export const Heros = () => {
                 Sempre estamos nos atualizando e postando novas imagens
               </p>
               <NavLink
-                className="btn main-color btn-lg text-white"
+                className="btn main-color btn-lg btn-outline-light"
                 to="/gallery"
               >
                 Checar galeria
@@ -46,13 +46,13 @@ export const Heros = () => {
           </div>
           <div className="col-4 col-md-4 container d-flex justify-content-center align-items-center">
             <div className="ml-2">
-              <h1>Sombrancelha</h1>
-              <p className="lead">Procurando servico de beleza</p>
+              <h1>Outros Servicos</h1>
+              <p className="lead">Procurando outros servicos</p>
               <NavLink
-                className="btn main-color btn-lg text-white"
+                className="btn main-color btn-lg btn-outline-light"
                 to="/booking"
               >
-                Agende aqui
+                Entre em contato
               </NavLink>
             </div>
           </div>
@@ -76,6 +76,9 @@ export const Heros = () => {
             <div className="mt-2">
               <h1>Conheca outros servicos</h1>
               <p className="lead">Conheca nossa galeria</p>
+              <a className="btn main-color btn-lg text-white" href="#">
+                Galeria
+              </a>
             </div>
           </div>
         </div>
