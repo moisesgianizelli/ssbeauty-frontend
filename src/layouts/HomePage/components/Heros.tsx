@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export const Heros = () => {
   return (
-    <div>
+    <div id="servicos">
       <div className="d-none d-lg-block">
         <div className="row g-0">
           <div className="col-sm-6 col-md-6">
@@ -14,7 +14,7 @@ export const Heros = () => {
               <p className="lead">Procurando servico de beleza</p>
               <NavLink
                 className="btn main-color btn-lg btn-outline-light"
-                to="/booking"
+                to="/agendamento"
               >
                 Agende aqui
               </NavLink>
@@ -47,10 +47,10 @@ export const Heros = () => {
           <div className="col-4 col-md-4 container d-flex justify-content-center align-items-center">
             <div className="ml-2">
               <h1>Outros Servicos</h1>
-              <p className="lead">Procurando outros servicos</p>
+              <p className="lead">Entre em contato conosco</p>
               <NavLink
                 className="btn main-color btn-lg btn-outline-light"
-                to="/booking"
+                to="/agendamento"
               >
                 Entre em contato
               </NavLink>
@@ -78,6 +78,16 @@ export const Heros = () => {
               <p className="lead">Conheca nossa galeria</p>
               <a className="btn main-color btn-lg text-white" href="#">
                 Galeria
+              </a>
+            </div>
+          </div>
+          <div className="m-2">
+            <div className="col-image-left2"></div>
+            <div className="mt-2">
+              <h1>Outros servicos</h1>
+              <p className="lead">Entre em contato</p>
+              <a className="btn main-color btn-lg text-white" href="#">
+                Entre em contato
               </a>
             </div>
           </div>
