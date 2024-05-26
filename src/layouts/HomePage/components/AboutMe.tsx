@@ -3,12 +3,11 @@ import { NavLink } from "react-router-dom";
 export const AboutMe = () => {
   return (
     <div
+      id="aboutMe"
       className="p-5"
       style={{
         backgroundColor: "#4b4058",
         minHeight: "100vh",
-        paddingLeft: "1rem",
-        paddingRight: "1rem",
       }}
     >
       <div
@@ -16,7 +15,10 @@ export const AboutMe = () => {
         style={{ height: "100%" }}
       >
         <div className="row w-100">
-          <div className="col-12 col-md-10 col-lg-8 mx-auto text-center">
+          <div
+            className="col-12 col-md-10 col-lg-8 mx-auto text-center"
+            style={{ padding: "0rem", marginTop: "-2rem" }}
+          >
             <h1 className="display-5 fw-bold">SSBeauty</h1>
             <p className="fs-5">
               Profissionalizada em micropigmentação, unhas e sobrancelhas,
@@ -25,7 +27,6 @@ export const AboutMe = () => {
               10 mil clientes, sempre prezando pela qualidade e satisfação. Como
               proprietária do SSBeauty, Suyene oferece seus serviços na região
               de São Paulo, onde é reconhecida por sua dedicação e excelência.
-              <br />
               <br />
               Suyene está constantemente se atualizando com as novas tendências
               de mercado, garantindo que suas técnicas e conhecimentos estejam
@@ -80,13 +81,13 @@ export const AboutMe = () => {
               </div>
             </div>
 
-            <NavLink
-              to="/agendamento"
+            <a
+              href="#servicos"
               className="btn main-color btn-lg btn-outline-light mt-3"
               style={{ width: "200px" }}
             >
-              Agendar agora
-            </NavLink>
+              Servicos
+            </a>
           </div>
         </div>
       </div>

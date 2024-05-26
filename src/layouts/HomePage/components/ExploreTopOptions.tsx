@@ -61,13 +61,13 @@ export const ExploreTopOptions = () => {
               </ul>
             </div>
 
-            <NavLink
-              to="/gallery"
+            <a
+              href="#aboutMe"
               className="btn main-color btn-lg btn-outline-light mt-3 mx-auto"
               style={{ width: "200px" }}
             >
               Conheça mais
-            </NavLink>
+            </a>
           </div>
         </div>
       </div>
