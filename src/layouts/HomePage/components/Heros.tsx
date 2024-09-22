@@ -46,7 +46,7 @@ export const Heros = () => {
           </div>
           <div className="col-4 col-md-4 container d-flex justify-content-center align-items-center">
             <div className="ml-2">
-              <h1>Outros Servicos</h1>
+              <h1>Outros Serviços</h1>
               <p className="lead">Entre em contato conosco</p>
               <NavLink
                 className="btn main-color btn-lg btn-outline-light"
