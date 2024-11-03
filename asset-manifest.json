@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a11e44b0.css",
+    "main.js": "/static/js/main.e7141d09.js",
+    "static/media/rosto5.JPG": "/static/media/rosto5.f6aaf1e29c15bf65693d.JPG",
+    "static/media/rosto3.JPG": "/static/media/rosto3.861b4e68b28c9b88dbff.JPG",
+    "static/media/boca.JPG": "/static/media/boca.3f90377b1add06b3c1eb.JPG",
+    "static/media/profile.jpg": "/static/media/profile.0a23dbb41827e69be945.jpg",
+    "index.html": "/index.html",
+    "main.a11e44b0.css.map": "/static/css/main.a11e44b0.css.map",
+    "main.e7141d09.js.map": "/static/js/main.e7141d09.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a11e44b0.css",
+    "static/js/main.e7141d09.js"
+  ]
+}
