@@ -73,9 +73,12 @@ export const Heros = () => {
                 Alinhamento e técnica para realçar a beleza natural das suas
                 sobrancelhas.
               </p>
-              <a className="btn main-color btn-lg text-white" href="#">
-                Agende agora
-              </a>
+              <NavLink
+                className="btn main-color btn-lg btn-outline-light"
+                to="/agendamento"
+              >
+                Agende aqui
+              </NavLink>
             </div>
           </div>
           <div className="m-2">
@@ -83,9 +86,12 @@ export const Heros = () => {
             <div className="mt-2">
               <h1>Conheça outros serviços</h1>
               <p className="lead">Conheça nossa galeria</p>
-              <a className="btn main-color btn-lg text-white" href="#">
-                Galeria
-              </a>
+              <NavLink
+                className="btn main-color btn-lg btn-outline-light"
+                to="/gallery"
+              >
+                Checar galeria
+              </NavLink>
             </div>
           </div>
           <div className="m-2">
@@ -93,7 +99,10 @@ export const Heros = () => {
             <div className="mt-2">
               <h1>Outros servicos</h1>
               <p className="lead">Entre em contato</p>
-              <a className="btn main-color btn-lg text-white" href="#">
+              <a
+                className="btn main-color btn-lg text-white"
+                href="https://wa.me/5511950424351"
+              >
                 Entre em contato via WhatsApp
               </a>
             </div>
