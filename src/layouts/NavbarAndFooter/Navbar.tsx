@@ -19,7 +19,7 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/home">
+              <NavLink className="nav-link" to="/">
                 Home
               </NavLink>
             </li>
