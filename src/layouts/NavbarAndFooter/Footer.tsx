@@ -7,7 +7,7 @@ export const Footer = () => {
         <p className="col-md-4 mb-0 text-white">SSBeauty App, Inc</p>
         <ul className="nav navbar-dark col-md-4 justify-content-end">
           <li className="nav-item">
-            <NavLink to="/home" className="nav-link px-2 text-white">
+            <NavLink to="/" className="nav-link px-2 text-white">
               Home
             </NavLink>
           </li>
