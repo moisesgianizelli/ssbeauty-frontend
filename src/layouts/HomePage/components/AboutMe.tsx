@@ -21,10 +21,10 @@ export const AboutMe = () => {
           >
             <h1 className="display-5 fw-bold">SSBeauty</h1>
             <p className="fs-5">
-              Profissionalizada em micropigmentação, unhas e sobrancelhas,
-              Suyene Silveira possui mais de 10 anos de experiência no setor de
-              beleza e estética. Ao longo de sua carreira, ela atendeu mais de
-              10 mil clientes, sempre prezando pela qualidade e satisfação. Como
+              Profissionalizada em micropigmentação e sobrancelhas, Suyene
+              Silveira possui mais de 10 anos de experiência no setor de beleza
+              e estética. Ao longo de sua carreira, ela atendeu mais de 10 mil
+              clientes, sempre prezando pela qualidade e satisfação. Como
               proprietária do SSBeauty, Suyene oferece seus serviços na região
               de São Paulo, onde é reconhecida por sua dedicação e excelência.
               <br />
@@ -86,7 +86,7 @@ export const AboutMe = () => {
               className="btn main-color btn-lg btn-outline-light mt-3"
               style={{ width: "200px" }}
             >
-              Servicos
+              Serviços
             </a>
           </div>
         </div>

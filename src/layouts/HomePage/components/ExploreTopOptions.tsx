@@ -32,29 +32,29 @@ export const ExploreTopOptions = () => {
           <div className="col-md-6 d-flex flex-column justify-content-center">
             <h1 className="display-5 fw-bold text-center">Suyene Silveira</h1>
             <p className="fs-4 text-center">
-              Profissionalizada em micropigmentacao, unhas e sobrancelhas
+              Profissionalizada em micropigmentação e sobrancelhas
             </p>
             <div className="col-12 text-center">
               <hr />
               <ul className="social list-inline">
                 <li className="list-inline-item">
-                  <a
-                    href="https://www.linkedin.com/feed/"
-                    className="icon brands"
-                  >
+                  <a href="https://wa.me/5511950424351" className="icon brands">
                     <FontAwesomeIcon icon={faWhatsapp} />
                   </a>
                 </li>
                 <li className="list-inline-item">
                   <a
-                    href="https://www.instagram.com/moisesgianizelli/"
+                    href="https://www.instagram.com/suyenebeauty/"
                     className="icon brands"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="#" className="icon brands">
+                  <a
+                    href="https://www.facebook.com/share/rBrQh1qUiAjGHF6Q/?mibextid=LQQJ4d"
+                    className="icon brands"
+                  >
                     <FontAwesomeIcon icon={faFacebook} />
                   </a>
                 </li>
