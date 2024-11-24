@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
@@ -9,37 +8,32 @@ import {
 export const ExploreTopOptions = () => {
   return (
     <div
-      className="p-5"
+      className="p-5 text-white"
       style={{
-        backgroundColor: "#332b3f",
+        backgroundImage: `url(${require("./../../../Images/PublicImages/award.jpg")})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
         height: "100vh",
         paddingLeft: "1rem",
         paddingRight: "1rem",
       }}
     >
       <div
-        className="container-fluid py-5 text-white d-flex justify-content-center align-items-center"
-        style={{ height: "100%" }}
+        className="container-fluid py-5 d-flex justify-content-center align-items-center"
+        style={{ height: "100%", backgroundColor: "rgba(0, 0, 0, 0.5)" }}
       >
-        <div className="row w-100">
-          <div className="col-md-6 d-flex justify-content-center">
-            <img
-              src={require("./../../../Images/PublicImages/profile.jpg")}
-              style={{ borderRadius: "50%", maxWidth: "70%", height: "auto" }}
-              alt="profile"
-            />
-          </div>
-          <div className="col-md-6 d-flex flex-column justify-content-center">
-            <h1 className="display-5 fw-bold text-center">Suyene Silveira</h1>
-            <p className="fs-4 text-center">
-              Profissionalizada em micropigmentação e sobrancelhas
+        <div className="row w-100 text-center">
+          <div className="col-md-12">
+            <h1 className="display-4 fw-bold">Welcome to Cameron Bakery</h1>
+            <p className="fs-4">
+              Freshly baked goods crafted with love daily. Explore our menu and
+              specials!
             </p>
-            <div className="col-12 text-center">
-              <hr />
+            <div className="mt-4">
               <ul className="social list-inline">
                 <li className="list-inline-item">
                   <a href="https://wa.me/5511950424351" className="icon brands">
-                    <FontAwesomeIcon icon={faWhatsapp} />
+                    <FontAwesomeIcon icon={faWhatsapp as any} />
                   </a>
                 </li>
                 <li className="list-inline-item">
@@ -47,7 +41,7 @@ export const ExploreTopOptions = () => {
                     href="https://www.instagram.com/suyenebeauty/"
                     className="icon brands"
                   >
-                    <FontAwesomeIcon icon={faInstagram} />
+                    <FontAwesomeIcon icon={faInstagram as any} />
                   </a>
                 </li>
                 <li className="list-inline-item">
@@ -55,18 +49,17 @@ export const ExploreTopOptions = () => {
                     href="https://www.facebook.com/share/rBrQh1qUiAjGHF6Q/?mibextid=LQQJ4d"
                     className="icon brands"
                   >
-                    <FontAwesomeIcon icon={faFacebook} />
+                    <FontAwesomeIcon icon={faFacebook as any} />
                   </a>
                 </li>
               </ul>
             </div>
-
             <a
-              href="#aboutMe"
-              className="btn main-color btn-lg btn-outline-light mt-3 mx-auto"
+              href="#menu"
+              className="btn main-color btn-lg btn-outline-light mt-4"
               style={{ width: "200px" }}
             >
-              Conheça mais
+              View Menu
             </a>
           </div>
         </div>

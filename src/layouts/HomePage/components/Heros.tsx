@@ -1,110 +1,66 @@
-import { NavLink } from "react-router-dom";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 export const Heros = () => {
   return (
-    <div id="servicos">
-      <div className="d-none d-lg-block">
-        <div className="row g-0">
-          <div className="col-sm-6 col-md-6">
-            <div className="col-image-left"></div>
-          </div>
-          <div className="col-4 col-md-4 container d-flex justify-content-center align-items-center">
-            <div className="ml-2">
-              <h1>Sobrancelha</h1>
-              <p className="lead">
-                Alinhamento e técnica para realçar a beleza natural das suas
-                sobrancelhas.
+    <div
+      id="testimonials"
+      style={{
+        backgroundColor: "#f8f9fa",
+        padding: "4rem 0",
+        margin: 0, // Ensures there are no gaps
+        width: "100%", // Full width for a strip effect
+      }}
+    >
+      <div className="container text-center">
+        <h2 className="fw-bold mb-4">Customer Testimonials</h2>
+        <div className="row justify-content-center">
+          {/* Testimonial 1 */}
+          <div className="col-md-4 mb-4">
+            <div className="p-4 bg-white shadow rounded">
+              <FontAwesomeIcon icon={faStar} className="text-warning" />
+              <FontAwesomeIcon icon={faStar} className="text-warning" />
+              <FontAwesomeIcon icon={faStar} className="text-warning" />
+              <FontAwesomeIcon icon={faStar} className="text-warning" />
+              <FontAwesomeIcon icon={faStar} className="text-warning" />
+              <p className="mt-3">
+                "The bread is always fresh and the cakes are absolutely
+                delicious! Highly recommended."
               </p>
-              <NavLink
-                className="btn main-color btn-lg btn-outline-light"
-                to="/agendamento"
-              >
-                Agende aqui
-              </NavLink>
+              <h5 className="mt-3 fw-bold">- John D.</h5>
             </div>
           </div>
-        </div>
-        <div className="row g-0">
-          <div className="col-4 col-md-4 container d-flex justify-content-center align-items-center">
-            <div className="ml-2">
-              <h1>Micropigmentação</h1>
-              <p className="lead">
-                Arte e precisão para sobrancelhas naturalmente definidas e
-                harmoniosas.
+
+          {/* Testimonial 2 */}
+          <div className="col-md-4 mb-4">
+            <div className="p-4 bg-white shadow rounded">
+              <FontAwesomeIcon icon={faStar} className="text-warning" />
+              <FontAwesomeIcon icon={faStar} className="text-warning" />
+              <FontAwesomeIcon icon={faStar} className="text-warning" />
+              <FontAwesomeIcon icon={faStar} className="text-warning" />
+              <FontAwesomeIcon icon={faStar} className="text-warning" />
+              <p className="mt-3">
+                "I love the variety of pastries here! The croissants are my
+                favorite."
               </p>
-              <NavLink
-                className="btn main-color btn-lg btn-outline-light"
-                to="/gallery"
-              >
-                Checar galeria
-              </NavLink>
+              <h5 className="mt-3 fw-bold">- Sarah L.</h5>
             </div>
           </div>
-          <div className="col-sm-6 col-md-6">
-            <div className="col-image-right"></div>
-          </div>
-        </div>
-        <div className="row g-0">
-          <div className="col-sm-6 col-md-6">
-            <div className="col-image-left2"></div>
-          </div>
-          <div className="col-4 col-md-4 container d-flex justify-content-center align-items-center">
-            <div className="ml-2">
-              <h1>Outros Serviços</h1>
-              <p className="lead">Entre em contato via WhatsApp</p>
-              <a
-                className="btn main-color btn-lg btn-outline-light"
-                href="https://wa.me/5511950424351"
-              >
-                Entre em contato
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Mobile Heros */}
-      <div id="body" className="d-lg-none">
-        <div className="container">
-          <div className="m-2">
-            <div className="col-image-left"></div>
-            <div className="mt-2">
-              <h1>Sobrancelha</h1>
-              <p className="lead">
-                Alinhamento e técnica para realçar a beleza natural das suas
-                sobrancelhas.
+
+          {/* Testimonial 3 */}
+          <div className="col-md-4 mb-4">
+            <div className="p-4 bg-white shadow rounded">
+              <FontAwesomeIcon icon={faStar} className="text-warning" />
+              <FontAwesomeIcon icon={faStar} className="text-warning" />
+              <FontAwesomeIcon icon={faStar} className="text-warning" />
+              <FontAwesomeIcon icon={faStar} className="text-warning" />
+              <FontAwesomeIcon icon={faStar} className="text-warning" />
+              <p className="mt-3">
+                "The staff is always so friendly, and the bakery smells like
+                heaven."
               </p>
-              <NavLink
-                className="btn main-color btn-lg btn-outline-light"
-                to="/agendamento"
-              >
-                Agende aqui
-              </NavLink>
-            </div>
-          </div>
-          <div className="m-2">
-            <div className="col-image-right"></div>
-            <div className="mt-2">
-              <h1>Conheça outros serviços</h1>
-              <p className="lead">Conheça nossa galeria</p>
-              <NavLink
-                className="btn main-color btn-lg btn-outline-light"
-                to="/gallery"
-              >
-                Checar galeria
-              </NavLink>
-            </div>
-          </div>
-          <div className="m-2">
-            <div className="col-image-left2"></div>
-            <div className="mt-2">
-              <h1>Outros servicos</h1>
-              <p className="lead">Entre em contato</p>
-              <a
-                className="btn main-color btn-lg text-white"
-                href="https://wa.me/5511950424351"
-              >
-                Entre em contato via WhatsApp
-              </a>
+              <h5 className="mt-3 fw-bold">- Emily R.</h5>
             </div>
           </div>
         </div>
